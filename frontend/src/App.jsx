@@ -1,12 +1,21 @@
 import './App.css'
-import MovieCard from "./components/MovieCard"
+import Home from "./pages/Home"
+import Favorite from './pages/Favorite';
+import {Routes, Route} from "react-router-dom"
+import NavBar from "./components/NavBar"
 
 function App() {
   const movieNumber = 1;
   return (
-  <>
-    {movieNumber === 1 && <MovieCard movie={{title: "Hero", release_date: "2024"}}/>}
-  </>   
+    <div>
+      <NavBar />
+    <main className="main-content">
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/favorites" element={<Favorite />}/>
+      </Routes>
+    </main> 
+    </div>
   );
 }
 

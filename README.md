@@ -21,9 +21,26 @@ create .env under folder frontend with this format
 VITE_TMDB_API_KEY=Your-Key
 ```
 
-###  Run Application
-To run application under frontend directory ru this command
+###  Run The Application
+To run application, under frontend directory run this command
 ```
 npm run dev
 ```
 ![image](https://s3.ap-southeast-1.amazonaws.com/upload.nasir.id/react-vite.png)
+
+Check it via browser
+![image](https://s3.ap-southeast-1.amazonaws.com/upload.nasir.id/movie-list.png)
+
+###  Run The Application Via Docker
+To Build the docker image, under react-movie directory run this command
+```
+docker build -t react-movie .
+```
+
+To run docker image, run this command
+```
+docker run -p 5173:5173 react-movie
+```
+
+Check it via browser
+![image](https://s3.ap-southeast-1.amazonaws.com/upload.nasir.id/movie-list.png)
